@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   _______, _______, _______, _______, _______, _______, _______, \
   _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______, _______, _______, _______, _______, _______, _______, \
   KC_CAPS, KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, _______, _______, _______, _______, _______, \
-  _______, _______, _______, _______, _______, KC_DEL,  _______, _______,
+  _______, _______, _______, _______, _______, KC_DEL,  _______, _______, _______, _______, _______, _______  \
 ),
 
 /* Raise
@@ -146,7 +146,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,  LSFT(LALT(LCTL(KC_F1))),  LSFT(LALT(LCTL(KC_F2))),  LSFT(LALT(LCTL(KC_F3))),  LSFT(LALT(LCTL(KC_F4))),  KC_UNDERSCORE, KC_PLUS,       KC_LEFT_CURLY_BRACE, KC_RIGHT_CURLY_BRACE,  KC_PIPE,                _______,        _______,  \
   _______,  LSFT(LALT(LCTL(KC_F5))),  LSFT(LALT(LCTL(KC_F6))),  LSFT(LALT(LCTL(KC_F7))),  LSFT(LALT(LCTL(KC_F8))),  KC_MINUS,      KC_EQUAL,      KC_LBRACKET,         KC_RBRACKET,           KC_BSLASH,              KC_COLON,       KC_DOUBLE_QUOTE,  \
   _______,  LSFT(LALT(LCTL(KC_F9))),  LSFT(LALT(LCTL(KC_F10))), LSFT(LALT(LCTL(KC_F11))), LSFT(LALT(LCTL(KC_F12))), _______,       _______,       _______,             KC_LEFT_ANGLE_BRACKET, KC_RIGHT_ANGLE_BRACKET, KC_QUESTION,    _______, \
-  _______,  _______,                  _______,                  _______,                  _______,                  KC_BSPC,       _______,       _______,             KC_MNXT,               KC_VOLD,                KC_VOLU,        KC_MPLY  \
+  _______,  _______,                  _______,                  _______,                  _______,                  KC_BSPC,       _______,       _______,             KC_HOME,               KC_PGDN,                KC_PGUP,        KC_END  \
 ),
 
 /* Directional
