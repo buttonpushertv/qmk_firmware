@@ -52,7 +52,10 @@ enum preonic_keycodes {
   LOWER,
   RAISE,
   DIRECTIONAL,
-  BUTTONPUSHER,
+  BUTTONPUSHER
+};
+
+enum tap_dance_codes {
   TD_A_CTRLA,
   TD_B_CTRLB,
   TD_C_CTRLC,
