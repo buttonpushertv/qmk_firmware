@@ -235,7 +235,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * +-----------------------------------------------------------------------------------------------------------+
 */
 
-[QWERTYX2C] = LAYOUT_preonic_grid( \
+[_QWERTYX2C] = LAYOUT_preonic_grid( \
   KC_GRV,  TD(TD_1_CTRL1), TD(TD_2_CTRL2), TD(TD_3_CTRL3), TD(TD_4_CTRL4), TD(TD_5_CTRL5), TD(TD_6_CTRL6), TD(TD_7_CTRL7), TD(TD_8_CTRL8),       TD(TD_9_CTRL9),     TD(TD_0_CTRL0),       TD(TD_BSPC_CTRLBSPC) \
   KC_ESC,  TD(TD_Q_CTRLQ), TD(TD_W_CTRLW), TD(TD_E_CTRLE), TD(TD_R_CTRLR), TD(TD_T_CTRLT), TD(TD_Y_CTRLY), TD(TD_U_CTRLU), TD(TD_I_CTRLI),       TD(TD_O_CTRLO),     TD(TD_P_CTRLP),       KC_DEL, \
   KC_TAB,  TD(TD_A_CTRLA), TD(TD_S_CTRLS), TD(TD_D_CTRLD), TD(TD_F_CTRLF), TD(TD_G_CTRLG), TD(TD_H_CTRLH), TD(TD_J_CTRLJ), TD(TD_K_CTRLK),       TD(TD_L_CTRLL),     TD(TD_SCLN_CTRLSCLN), TD(TD_QUOT_CTRLQUOT), \
@@ -343,7 +343,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT_preonic_grid( \
   _______, _______, _______, _______, _______, _______, _______, _______, _______,   _______, _______, _______, \
   _______, RESET,   _______, _______, _______, _______, _______, _______, _______,   _______, _______, _______,  \
-  _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  QWERTYX2C, _______,  _______, _______, \
+  _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  QWERTYX2C, _______, _______, _______, \
   _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______,   _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______,   _______, _______, _______  \
 )
