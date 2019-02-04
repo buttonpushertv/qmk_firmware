@@ -141,7 +141,7 @@ int cur_dance (qk_tap_dance_state_t *state) {
 //Tap Dance Definitions
 //THIS SECTION HAS TO BE AT THE END OF THE TAP DANCE SECTION
 qk_tap_dance_action_t tap_dance_actions[] = {
- ,[TD_A_CTRLA] = ACTION_TAP_DANCE_DOUBLE(KC_A, LCTL(KC_A))
+ [TD_A_CTRLA] = ACTION_TAP_DANCE_DOUBLE(KC_A, LCTL(KC_A))
  ,[TD_B_CTRLB] = ACTION_TAP_DANCE_DOUBLE(KC_B, LCTL(KC_B))
  ,[TD_C_CTRLC] = ACTION_TAP_DANCE_DOUBLE(KC_C, LCTL(KC_C))
  ,[TD_D_CTRLD] = ACTION_TAP_DANCE_DOUBLE(KC_D, LCTL(KC_D))
@@ -234,11 +234,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * | CONTROL| ALT    | GUI    | tional | Lower  |  SPACE          | Raise  | Left   | Down   | Up     | Right  |
 * +-----------------------------------------------------------------------------------------------------------+
 */
-_QWERTYX2C] = LAYOUT_preonic_grid( \
 
-
-
-
+[QWERTYX2C] = LAYOUT_preonic_grid( \
   KC_GRV,  TD(TD_1_CTRL1), TD(TD_2_CTRL2), TD(TD_3_CTRL3), TD(TD_4_CTRL4), TD(TD_5_CTRL5), TD(TD_6_CTRL6), TD(TD_7_CTRL7), TD(TD_8_CTRL8),       TD(TD_9_CTRL9),     TD(TD_0_CTRL0),       TD(TD_BSPC_CTRLBSPC) \
   KC_ESC,  TD(TD_Q_CTRLQ), TD(TD_W_CTRLW), TD(TD_E_CTRLE), TD(TD_R_CTRLR), TD(TD_T_CTRLT), TD(TD_Y_CTRLY), TD(TD_U_CTRLU), TD(TD_I_CTRLI),       TD(TD_O_CTRLO),     TD(TD_P_CTRLP),       KC_DEL, \
   KC_TAB,  TD(TD_A_CTRLA), TD(TD_S_CTRLS), TD(TD_D_CTRLD), TD(TD_F_CTRLF), TD(TD_G_CTRLG), TD(TD_H_CTRLH), TD(TD_J_CTRLJ), TD(TD_K_CTRLK),       TD(TD_L_CTRLL),     TD(TD_SCLN_CTRLSCLN), TD(TD_QUOT_CTRLQUOT), \
