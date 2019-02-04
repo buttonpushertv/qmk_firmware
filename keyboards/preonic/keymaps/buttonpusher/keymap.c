@@ -141,7 +141,7 @@ int cur_dance (qk_tap_dance_state_t *state) {
 //Tap Dance Definitions
 //THIS SECTION HAS TO BE AT THE END OF THE TAP DANCE SECTION
 qk_tap_dance_action_t tap_dance_actions[] = {
- [TD_A_CTRLA] = ACTION_TAP_DANCE_DOUBLE(KC_A, LCTL(KC_A))
+  [TD_A_CTRLA] = ACTION_TAP_DANCE_DOUBLE(KC_A, LCTL(KC_A))
  ,[TD_B_CTRLB] = ACTION_TAP_DANCE_DOUBLE(KC_B, LCTL(KC_B))
  ,[TD_C_CTRLC] = ACTION_TAP_DANCE_DOUBLE(KC_C, LCTL(KC_C))
  ,[TD_D_CTRLD] = ACTION_TAP_DANCE_DOUBLE(KC_D, LCTL(KC_D))
@@ -176,12 +176,12 @@ qk_tap_dance_action_t tap_dance_actions[] = {
  ,[TD_7_CTRL7] = ACTION_TAP_DANCE_DOUBLE(KC_7, LCTL(KC_7))
  ,[TD_8_CTRL8] = ACTION_TAP_DANCE_DOUBLE(KC_8, LCTL(KC_8))
  ,[TD_9_CTRL9] = ACTION_TAP_DANCE_DOUBLE(KC_9, LCTL(KC_9))
- ,[TD__0CTRL0] = ACTION_TAP_DANCE_DOUBLE(KC_0, LCTL(KC_0))
+ ,[TD_0_CTRL0] = ACTION_TAP_DANCE_DOUBLE(KC_0, LCTL(KC_0))
  ,[TD_QUOT_CTRLQUOT] = ACTION_TAP_DANCE_DOUBLE(KC_QUOT, LCTL(KC_QUOT))
  ,[TD_SCLN_CTRLSCLN] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, LCTL(KC_SCLN))
  ,[TD_SLSH_CTRLSLSH] = ACTION_TAP_DANCE_DOUBLE(KC_SLSH, LCTL(KC_SLSH))
  ,[TD_DOT_CTRLDOT] = ACTION_TAP_DANCE_DOUBLE(KC_DOT, LCTL(KC_DOT))
- ,[TD_COMM_CTRLCOMM] = ACTION_TAP_DANCE_DOUBLE(KC_COMM, LCTL(KC_COMM)
+ ,[TD_COMM_CTRLCOMM] = ACTION_TAP_DANCE_DOUBLE(KC_COMM, LCTL(KC_COMM))
  ,[TD_ENT_CTRLENT] = ACTION_TAP_DANCE_DOUBLE(KC_ENT, LCTL(KC_ENT))
  ,[TD_BSPC_CTRLBSPC] = ACTION_TAP_DANCE_DOUBLE(KC_BSPC, LCTL(KC_BSPC))
  ,[TD_BSLS_CTRLBSLS] = ACTION_TAP_DANCE_DOUBLE(KC_BSLS, LCTL(KC_BSLS))
@@ -264,7 +264,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
 [_LOWER] = LAYOUT_preonic_grid( \
   _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_INS,       KC_CAPS, KC_F17,  KC_F18,  KC_F19,  KC_F20,  _______, \
-  _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   KS_WHOM,      KC_CALC, KC_F21,  KC_F22,  KCF_23,  KC_F24,  _______, \
+  _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_WHOM,      KC_CALC, KC_F21,  KC_F22,  KCF_23,  KC_F24,  _______, \
   _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______,      _______, _______, _______, _______, _______, _______, \
   _______, KC_F13,  KC_F14,  KC_F15,  KC_F16,  BUTTONPUSHER, _______, _______, _______, _______, _______, _______, \
   _______, _______, _______, _______, _______, KC_DEL,       _______, _______, _______, _______, _______, _______  \
@@ -291,8 +291,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE] = LAYOUT_preonic_grid( \
   _______,  LSFT(LALT(LCTL(KC_F1))),  LSFT(LALT(LCTL(KC_F2))),  LSFT(LALT(LCTL(KC_F3))),  LSFT(LALT(LCTL(KC_F4))),   KC_PERCENT,    KC_CIRCUMFLEX, KC_AMPERSAND,        KC_ASTERISK,           KC_LEFT_PAREN,          KC_RIGHT_PAREN, _______, \
   _______,  LSFT(LALT(LCTL(KC_F5))),  LSFT(LALT(LCTL(KC_F6))),  LSFT(LALT(LCTL(KC_F7))),  LSFT(LALT(LCTL(KC_F8))),   KC_UNDERSCORE, KC_PLUS,       KC_LEFT_CURLY_BRACE, KC_RIGHT_CURLY_BRACE,  KC_PIPE,                _______,        _______,  \
-  _______,  LSFT(LALT(LCTL(KC_F9))),  LSFT(LALT(LCTL(KC_F10))), LSFT(LALT(LCTL(KC_F11))), LSFT(LALT(LCTL(KC_F12))),  KC_MINUS,      KC_EQUAL,      KC_LBRACKET,         KC_RBRACKET,           TD(TD_BSLS_CTRLBSLS),              KC_COLON,       KC_DOUBLE_QUOTE,  \
-  _______,  LSFT(LALT(LCTL(KC_F13))),  LSFT(LALT(LCTL(KC_F14))), LSFT(LALT(LCTL(KC_F15))), LSFT(LALT(LCTL(KC_F16))), _______,       _______,       _______,             KC_LEFT_ANGLE_BRACKET, KC_RIGHT_ANGLE_BRACKET, KC_QUESTION,    _______, \
+  _______,  LSFT(LALT(LCTL(KC_F9))),  LSFT(LALT(LCTL(KC_F10))), LSFT(LALT(LCTL(KC_F11))), LSFT(LALT(LCTL(KC_F12))),  KC_MINUS,      KC_EQUAL,      KC_LBRACKET,         KC_RBRACKET,           TD(TD_BSLS_CTRLBSLS),   KC_COLON,       KC_DOUBLE_QUOTE,  \
+  _______,  LSFT(LALT(LCTL(KC_F13))), LSFT(LALT(LCTL(KC_F14))), LSFT(LALT(LCTL(KC_F15))), LSFT(LALT(LCTL(KC_F16))),  _______,       _______,       _______,             KC_LEFT_ANGLE_BRACKET, KC_RIGHT_ANGLE_BRACKET, KC_QUESTION,    _______, \
   _______,  _______,                  _______,                  _______,                  _______,                   KC_BSPC,       _______,       _______,             KC_HOME,               KC_PGDN,                KC_PGUP,        KC_END  \
 ),
 
@@ -319,7 +319,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, KC_WH_L,     KC_MS_U,     KC_WH_R,     KC_WH_U,     _______,     KC_ACL0,     _______,     _______,     _______,     _______,     _______, \
   _______, KC_MS_L,     KC_MS_D,     KC_MS_R,     KC_WH_D,     _______,     KC_ACL1,     _______,     _______,     _______,     _______,     _______, \
   _______, KC_BTN1,     KC_BTN2,     KC_BTN3,     KC_BTN4,     KC_BTN5,     KC_ACL2,     _______,     KC_MUTE,     KC_MPLY,     KC_MSTP,     _______, \
-  _______, _______,     KC_CALC,     _______,     _______,     _______,     _______,     _______,     KC_MPRV,     KC_VOLD,     KC_VOLU,     KC_MNXT  \
+  _______, _______,     _______,     _______,     _______,     _______,     _______,     _______,     KC_MPRV,     KC_VOLD,     KC_VOLU,     KC_MNXT  \
 ),
 
 /* Adjust (Lower + Raise)
