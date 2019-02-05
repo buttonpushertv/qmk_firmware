@@ -262,15 +262,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * |        | F13    | F14    | F15    | F16    |b'pusher|        |        |        |        |        |        |
 * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
 * |CTRL-ALT|        |        |        |        |                 |        |        |        |        |        |
-* |DEL     |        |        |        |XXXXXXXX|  DELETE         |        |        |        |        |        |
+* |DEL     |        |        | ENTER  |XXXXXXXX|  DELETE         |        |        |        |        |        |
 * +-----------------------------------------------------------------------------------------------------------+
 */
 [_LOWER] = LAYOUT_preonic_grid( \
-  KC_WBAK,            KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_INS,       KC_CAPS, KC_F17,  KC_F18,  KC_F19,  KC_F20,  _______, \
-  KC_WHOM,            KC_F5,   KC_F6,   KC_F7,   KC_F8,   _______,      KC_PSCR, KC_F21,  KC_F22,  KC_F23,  KC_F24,  _______, \
-  KC_WSCH,            KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______,      KC_CALC, KC_MYCM, _______, _______, _______, _______, \
-  _______,            KC_F13,  KC_F14,  KC_F15,  KC_F16,  BUTTONPUSHER, _______, _______, _______, _______, _______, _______, \
-  LALT(LCTL(KC_DEL)), _______, _______, _______, _______, KC_DEL,       KC_DEL,  _______, _______, _______, _______, _______  \
+  KC_WBAK,            KC_F1,   KC_F2,   KC_F3,    KC_F4,   KC_INS,       KC_CAPS, KC_F17,  KC_F18,  KC_F19,  KC_F20,  _______, \
+  KC_WHOM,            KC_F5,   KC_F6,   KC_F7,    KC_F8,   _______,      KC_PSCR, KC_F21,  KC_F22,  KC_F23,  KC_F24,  _______, \
+  KC_WSCH,            KC_F9,   KC_F10,  KC_F11,   KC_F12,  _______,      KC_CALC, KC_MYCM, _______, _______, _______, _______, \
+  _______,            KC_F13,  KC_F14,  KC_F15,   KC_F16,  BUTTONPUSHER, _______, _______, _______, _______, _______, _______, \
+  LALT(LCTL(KC_DEL)), _______, _______, KC_ENTER, _______, KC_DEL,       KC_DEL,  _______, _______, _______, _______, _______  \
 ),
 
 /* Raise
