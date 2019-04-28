@@ -1,4 +1,4 @@
-![Gherkin Wanleg Layout Image](https://i.imgur.com/mXsgoro.png)
+![Gherkin Wanleg Layout Image](https://camo.githubusercontent.com/a8909c6c1eb19aca2c00ac755ae0865e6c62162a/68747470733a2f2f342e62702e626c6f6773706f742e636f6d2f2d735131382d6c4e5a584f632f57437a6c5464652d3450492f41414141414141425f4a512f7151726568414d4736444d4b663369346f6a346d6b6d4c474f6654557662334b67434c63422f733634302f494d475f32303136313131365f3132323932362e6a7067)
 
 # Gherkin Wanleg Layout
 Here is the layout I came up with to preserve a standard QWERTY layout as much as possible, in as few layers as possible for a 30 key board.
