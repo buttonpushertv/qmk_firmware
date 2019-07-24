@@ -68,12 +68,12 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 };
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-[_BASE] = KEYMAP {
+[_BASE] = LAYOUT_ortho_4x4(
   LSFT(LALT(LCTL(KC_F9))), LSFT(LALT(LCTL(KC_F10))), LSFT(LALT(LCTL(KC_F11))), LSFT(LALT(LCTL(KC_F12))),
   LSFT(LALT(LCTL(KC_F4))), LSFT(LALT(LCTL(KC_F5))),  LSFT(LALT(LCTL(KC_F6))),  LSFT(LALT(LCTL(KC_F7))),
   LSFT(LALT(LCTL(KC_F1))), LSFT(LALT(LCTL(KC_F2))),  LSFT(LALT(LCTL(KC_F3))),  LSFT(LALT(LCTL(KC_F4))),
   TD(TD_Z_CTRLZ),          TD(TD_X_CTRLX),           TD(TD_C_CTRLC),           TD(TD_V_CTRLV),
-},
+),
 
 };
 
