@@ -12,6 +12,8 @@ This layout started out based on the **Default Preonic** Layout. My Preonic serv
 
 Pretty standard Preonic layout. Since my Rev. 3 doesn't have backlighting, I have opted to move CONTROL to the bottom leftmost key. ALT is the second key in from left along bottom row. GUI/OS key is 3rd key in from left, along bottom row. The fourth key in from the left, along bottom row activates the DIRECTIONAL layer (see below).
 
+OPTIMIZATION FOR LEFT-HANDED USE: after using the keyboard for a few months, I found that I was still running into difficulty entering commands like CONTROL-O or CONTROL-P. I've implemented One Shot Key settings on the SHIFT, CONTROL, ALT, & GUI keys in the lower left. This should allow a quick tap of the LSHFT/LCTRL/LAT/LGUI key and then you can follow with the letter O or P (or any other) without needing to keep the modifier held down and stretching your hand across the board.
+
 ## LOWER Layer
 
 {image here of LOWER Layer}
@@ -36,7 +38,7 @@ Even though, I use a Logitech MX Ergo Trackball that has a handy ability to togg
 
 The bottom right holds media control keys. I rarely use them, but they are nice to have available.
 
-Additionally, I make heavy use of AquaSnap - an app for controlling window placements on the Windows desktop. The top row is comprised of keys that press the corresponding NUMPAD numeral comnbined with the GUI key as a modifier.
+Additionally, I make heavy use of AquaSnap - an app for controlling window placements on the Windows desktop. The top row is comprised of keys that press the corresponding NUMPAD numeral combined with the GUI key as a modifier.
 
 ## ADJUST Layer (Lower + Raise)
 

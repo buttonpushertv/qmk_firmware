@@ -98,6 +98,7 @@ enum tap_dance_codes {
   TD_DOT_CTRLDOT,
   TD_COMM_CTRLCOMM,
   TD_ENT_CTRLENT,
+  TD_DEL_CTRLDEL,
   TD_BSPC_CTRLBSPC,
   TD_BSLS_CTRLBSLS
 };
@@ -186,6 +187,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
  ,[TD_DOT_CTRLDOT] = ACTION_TAP_DANCE_DOUBLE(KC_DOT, LCTL(KC_DOT))
  ,[TD_COMM_CTRLCOMM] = ACTION_TAP_DANCE_DOUBLE(KC_COMM, LCTL(KC_COMM))
  ,[TD_ENT_CTRLENT] = ACTION_TAP_DANCE_DOUBLE(KC_ENT, LCTL(KC_ENT))
+ ,[TD_DEL_CTRLDEL] = ACTION_TAP_DANCE_DOUBLE(KC_DEL, LCTL(KC_DEL))
  ,[TD_BSPC_CTRLBSPC] = ACTION_TAP_DANCE_DOUBLE(KC_BSPC, LCTL(KC_BSPC))
  ,[TD_BSLS_CTRLBSLS] = ACTION_TAP_DANCE_DOUBLE(KC_BSLS, LCTL(KC_BSLS))
   // Other declarations would go here, separated by commas, if you have them
@@ -212,11 +214,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 * +-----------------------------------------------------------------------------------------------------------+
 */
 [_QWERTY] = LAYOUT_preonic_grid( \
-  KC_GRV,  KC_1,    KC_2,    KC_3,        KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
-  KC_TAB,  KC_Q,    KC_W,    KC_E,        KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,  \
-  KC_ESC,  KC_A,    KC_S,    KC_D,        KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
-  KC_LSFT, KC_Z,    KC_X,    KC_C,        KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,  \
-  KC_LCTL, KC_LALT, KC_LGUI, DIRECTIONAL, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
+  KC_GRV,        KC_1,          KC_2,          KC_3,        KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+  KC_TAB,        KC_Q,          KC_W,          KC_E,        KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,  \
+  KC_ESC,        KC_A,          KC_S,          KC_D,        KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
+  OSM(MOD_LSFT), KC_Z,          KC_X,          KC_C,        KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,  \
+  OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), DIRECTIONAL, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
 ),
 
 /* QwertyX2C
@@ -240,7 +242,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTYX2C] = LAYOUT_preonic_grid( \
   KC_GRV,  TD(TD_1_CTRL1), TD(TD_2_CTRL2), TD(TD_3_CTRL3), TD(TD_4_CTRL4), TD(TD_5_CTRL5), TD(TD_6_CTRL6), TD(TD_7_CTRL7), TD(TD_8_CTRL8),       TD(TD_9_CTRL9),     TD(TD_0_CTRL0),       TD(TD_BSPC_CTRLBSPC), \
-  KC_ESC,  TD(TD_Q_CTRLQ), TD(TD_W_CTRLW), TD(TD_E_CTRLE), TD(TD_R_CTRLR), TD(TD_T_CTRLT), TD(TD_Y_CTRLY), TD(TD_U_CTRLU), TD(TD_I_CTRLI),       TD(TD_O_CTRLO),     TD(TD_P_CTRLP),       KC_DEL, \
+  KC_ESC,  TD(TD_Q_CTRLQ), TD(TD_W_CTRLW), TD(TD_E_CTRLE), TD(TD_R_CTRLR), TD(TD_T_CTRLT), TD(TD_Y_CTRLY), TD(TD_U_CTRLU), TD(TD_I_CTRLI),       TD(TD_O_CTRLO),     TD(TD_P_CTRLP),       TD(TD_DEL_CTRLDEL), \
   KC_TAB,  TD(TD_A_CTRLA), TD(TD_S_CTRLS), TD(TD_D_CTRLD), TD(TD_F_CTRLF), TD(TD_G_CTRLG), TD(TD_H_CTRLH), TD(TD_J_CTRLJ), TD(TD_K_CTRLK),       TD(TD_L_CTRLL),     TD(TD_SCLN_CTRLSCLN), TD(TD_QUOT_CTRLQUOT), \
   KC_LSFT, TD(TD_Z_CTRLZ), TD(TD_X_CTRLX), TD(TD_C_CTRLC), TD(TD_V_CTRLV), TD(TD_B_CTRLB), TD(TD_N_CTRLN), TD(TD_M_CTRLM), TD(TD_COMM_CTRLCOMM), TD(TD_DOT_CTRLDOT), TD(TD_SLSH_CTRLSLSH), TD(TD_ENT_CTRLENT),  \
   KC_LCTL, KC_LALT,        KC_LGUI,        DIRECTIONAL,    LOWER,          KC_SPC,         KC_SPC,         RAISE,          KC_LEFT,              KC_DOWN,            KC_UP,                KC_RGHT \
