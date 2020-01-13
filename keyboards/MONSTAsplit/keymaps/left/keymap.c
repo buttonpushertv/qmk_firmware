@@ -43,21 +43,17 @@
 #include QMK_KEYBOARD_H
 
 // Defines names for use in layer keycodes and the keymap
-enum layer_names {
+enum left_layers {
     _BASE,
     _LOWER,
     _RAISE
 };
 
-enum keycodes {
+enum left_keycodes {
     BASE = SAFE_RANGE,
     LOWER,
-    RAISE
-};
-
-// Macro Declarations
-enum {
-  DBL_0 = 0
+    RAISE,
+    DBL_0
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -93,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_END,                   KC_PGDN,                  KC_P7,                    KC_P8,                    KC_P9,                    KC_PPLS,                  KC_TAB,  KC_Q,    KC_W,    KC_E,   KC_R,   KC_T,   LCTL(KC_LALT),
       KC_LCTRL,                 KC_LGUI,                  KC_P4,                    KC_P5,                    KC_P6,                    KC_NO,                    KC_CAPS, KC_A,    KC_S,    KC_D,   KC_F,   KC_G,   LCTL(KC_LSFT),
       KC_UP,                    KC_DOWN,                  KC_P1,                    KC_P2,                    KC_P3,                    KC_PENT,                  KC_LSFT, KC_Z,    KC_X,    KC_C,   KC_V,   KC_B,   LALT(KC_LSFT),
-      KC_LEFT,                  KC_RIGHT,                 M(DBL_0),                 KC_P0,                    KC_PDOT,                  LOWER,                    KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_SPC, KC_SPC, RAISE
+      KC_LEFT,                  KC_RIGHT,                 DBL_0,                    KC_P0,                    KC_PDOT,                  LOWER,                    KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_SPC, KC_SPC, RAISE
     ),
     /* Lower
     * +--------------------------------------------------------------------------------------------------------------------+
@@ -112,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |        |        | mouse  | mouse  | mouse  | mouse  |        |        |        |        |        |        |        |
     * |        |        | move lt| move dn| move rt| scrl dn|        |        |        |        |        |        |        |
     * +--------------------------------------------------------------------------------------------------------------------+
-    * |        |        | mouse  | mouse  | mouse  |        |        |        |        |        |        |        |        |
+    * |        |        | mouse  | mouse  | mouse  |        |        |        |        | CALC   |        |        |        |
     * |        |        | btn 1  | btn 2  | btn 3  |        |        |        |        |        |        |        |        |
     * +--------------------------------------------+--------+--------------------------------------------------------------+
     * |        |        | mouse  | mouse  |        |XXXXXXXX|        |        |        |        |        |        |        |
@@ -121,13 +117,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
     [_LOWER] = LAYOUT(
       LSFT(LALT(LCTL(KC_F13))), LSFT(LALT(LCTL(KC_F14))), LSFT(LALT(LCTL(KC_F15))), LSFT(LALT(LCTL(KC_F16))), LSFT(LALT(LCTL(KC_F17))), LSFT(LALT(LCTL(KC_F18))),  _______, _______, _______, _______, _______, _______, _______,
-      LSFT(LALT(LCTL(KC_F19))), LSFT(LALT(LCTL(KC_F20))), LSFT(LALT(LCTL(KC_F21))), LSFT(LALT(LCTL(KC_F22))), LSFT(LALT(LCTL(KC_F23))), LSFT(LALT(LCTL(KC_F24)))   _______, _______, _______, _______, _______, _______, _______,
+      LSFT(LALT(LCTL(KC_F19))), LSFT(LALT(LCTL(KC_F20))), LSFT(LALT(LCTL(KC_F21))), LSFT(LALT(LCTL(KC_F22))), LSFT(LALT(LCTL(KC_F23))), LSFT(LALT(LCTL(KC_F24))),  _______, _______, _______, _______, _______, _______, _______,
       _______,                  _______,                  KC_ACL0,                  KC_ACL1,                  KC_ACL2,                  _______,                   _______, _______, _______, _______, _______, _______, _______,
       _______,                  _______,                  KC_WH_L,                  KC_MS_U,                  KC_WH_R,                  KC_WH_U,                   _______, _______, _______, _______, _______, _______, _______,
       _______,                  _______,                  KC_MS_L,                  KC_MS_D,                  KC_MS_R,                  KC_WH_D,                   _______, _______, _______, _______, _______, _______, _______,
-      _______,                  _______,                  KC_BTN1,                  KC_BTN2,                  KC_BTN3,                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-      _______,                  _______,                  KC_BTN4,                  KC_BTN5,                  _______,                  KC_NO,   _______, _______, _______, _______, _______, _______, _______, _______, _______,
-
+      _______,                  _______,                  KC_BTN1,                  KC_BTN2,                  KC_BTN3,                  _______,                   _______, _______, _______, KC_CALC, _______, _______, _______,
+      _______,                  _______,                  KC_BTN4,                  KC_BTN5,                  _______,                  KC_NO,                     _______, _______, _______, _______, _______, _______, _______
     ),
     /* Raise
     * +--------------------------------------------------------------------------------------------------------------------+
@@ -140,13 +135,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |        |        |        |        |        |        |        |        |        |        |        |        |        |
     * |        |        |        |        |        |        |        |        |        |        |        |        |        |
     * +--------------------------------------------------------------------------------------------------------------------+
-    * |        |        |        |        |        |        |        |        | Web    |        |        |        |        |
-    * |        |        |        |        |        |        |        |        | Home   |        |        |        |        |
+    * |        |        |        |        |        |        |        |        | UP     |        |        |        |        |
+    * |        |        |        |        |        |        |        |        |        |        |        |        |        |
     * +--------------------------------------------------------------------------------------------------------------------+
-    * |        |        |        |        |        |        |        |        | Web    |        |        |        |        |
-    * |        |        |        |        |        |        |        |        | Search |        |        |        |        |
+    * |        |        |        |        |        |        |        | LEFT   | DOWN   | RIGHT  |        |        |        |
+    * |        |        |        |        |        |        |        |        |        |        |        |        |        |
     * +--------------------------------------------------------------------------------------------------------------------+
-    * |        |        |        |        |        |        |        |        |        | Calc   |        |        |        |
+    * |        |        |        |        |        |        |        |        |        |        |        |        |        |
     * |        |        |        |        |        |        |        |        |        |        |        |        |        |
     * +--------------------------------------------+--------+--------------------------------------------------------------+
     * |        |        |        | RESET  |        |        |        |        |        |        | BACK            |XXXXXXXX|
@@ -154,28 +149,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * +--------------------------------------------------------------------------------------------------------------------+
     */
     [_RAISE] = LAYOUT(
-      _______, _______, _______, _______, _______, _______, KC_BSPC, KC_F19,  KC_F20,  KC_F21,  KC_F22,  KC_F23,  KC_F24,
-      _______, _______, _______, _______, _______, _______, _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
-      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-      _______, _______, _______, _______, _______, _______, _______, _______, KC_MYCM, _______, _______, _______, _______,
-      _______, _______, _______, _______, _______, _______, _______, _______, KC_WSCH, _______, _______, _______, _______,
-      _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_CALC, _______, _______, _______,
-      _______, _______, _______, RESET,   _______, _______, _______, _______, _______, _______, _______, KC_BSPC, KC_NO
+      _______, _______, _______, _______, _______, _______, KC_BSPC, KC_F19,  KC_F20,  KC_F21,   KC_F22,  KC_F23,  KC_F24,
+      _______, _______, _______, _______, _______, _______, _______, KC_F7,   KC_F8,   KC_F9,    KC_F10,  KC_F11,  KC_F12,
+      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______,
+      _______, _______, _______, _______, _______, _______, _______, _______, KC_UP,   _______,  _______, _______, _______,
+      _______, _______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______, _______,
+      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______,
+      _______, _______, _______, RESET,   _______, _______, _______, _______, _______, _______,  _______, KC_BSPC, KC_NO
     )
-
-
 };
 
-const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+case LOWER:
   if (record->event.pressed) {
-      switch(id) {
-          case DBL_0:
-              SEND_STRING("00");
-              return false;
-      }
+    layer_on(_LOWER);
+  } else {
+    layer_off(_LOWER);
   }
-  return MACRO_NONE;
+  return false;
+  break;
+case RAISE:
+  if (record->event.pressed) {
+    layer_on(_RAISE);
+  } else {
+    layer_off(_RAISE);
+  }
+  return false;
+  break;
+  case DBL_0:
+    SEND_STRING("00");
+    return false;
+  }
+  return true;
 };
+
 
 /*
 void matrix_init_user(void) {
