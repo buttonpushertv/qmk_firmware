@@ -118,7 +118,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LOWER] = LAYOUT(
       LSFT(LALT(LCTL(KC_F13))), LSFT(LALT(LCTL(KC_F14))), LSFT(LALT(LCTL(KC_F15))), LSFT(LALT(LCTL(KC_F16))), LSFT(LALT(LCTL(KC_F17))), LSFT(LALT(LCTL(KC_F18))),  _______, _______, _______, _______, _______, _______, _______,
       LSFT(LALT(LCTL(KC_F19))), LSFT(LALT(LCTL(KC_F20))), LSFT(LALT(LCTL(KC_F21))), LSFT(LALT(LCTL(KC_F22))), LSFT(LALT(LCTL(KC_F23))), LSFT(LALT(LCTL(KC_F24))),  _______, _______, _______, _______, _______, _______, _______,
-      _______,                  _______,                  KC_ACL0,                  KC_ACL1,                  KC_ACL2,                  _______,                   _______, _______, _______, _______, _______, _______, _______,
+      _______,                  KC_NUMLOCK,               KC_ACL0,                  KC_ACL1,                  KC_ACL2,                  _______,                   _______, _______, _______, _______, _______, _______, _______,
       _______,                  _______,                  KC_WH_L,                  KC_MS_U,                  KC_WH_R,                  KC_WH_U,                   _______, _______, _______, _______, _______, _______, _______,
       _______,                  _______,                  KC_MS_L,                  KC_MS_D,                  KC_MS_R,                  KC_WH_D,                   _______, _______, _______, _______, _______, _______, _______,
       _______,                  _______,                  KC_BTN1,                  KC_BTN2,                  KC_BTN3,                  _______,                   _______, _______, _______, KC_CALC, _______, _______, _______,
